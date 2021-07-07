@@ -316,7 +316,7 @@
         </sql>
     </changeSet>
 
-    <changeSet id="global-property-past-appointments-sql" author="Maharjun, Shireesha">
+    <!-- <changeSet id="global-property-past-appointments-sql" author="Maharjun, Shireesha">
         <preConditions onFail="MARK_RAN">
             <sqlCheck expectedResult="0">select count(*) from global_property where property='bahmni.sqlGet.pastAppointments'</sqlCheck>
         </preConditions>
@@ -330,5 +330,5 @@
         </preConditions>
         <comment>Adding query to fetch upcoming appointments for patient</comment>
         <sqlFile path="patientUpcomingAppointments.sql"/>
-    </changeSet>
+    </changeSet> -->
 </databaseChangeLog>

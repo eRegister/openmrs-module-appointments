@@ -151,6 +151,10 @@ public class AppointmentMapper {
         map.put("name", p.getPersonName().getFullName());
         map.put("uuid", p.getUuid());
         map.put("identifier", p.getPatientIdentifier().getIdentifier());
+        if(p.getPatientIdentifier("HIV Program ID") != null)
+            map.put("hivIdentifier", p.getPatientIdentifier("HIV Program ID").getIdentifier());
+        if(p.getPatientIdentifier("New HIV Program ID") != null)
+            map.put("newHivIdentifier", p.getPatientIdentifier("New HIV Program ID").getIdentifier());
         return map;
     }
 }
